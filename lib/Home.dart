@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdf_viewer/Option1.dart';
+import 'package:flutter_pdf_viewer/Option2.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,8 +12,16 @@ class _HomeState extends State<Home> {
 
   void _option1() {
     Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Option1()));
+      context,
+       MaterialPageRoute(builder: (context) => Option1())
+    );
+  }
+
+  void _option2() {
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context) => Option2())
+    );
   }
 
   @override
@@ -20,7 +29,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text("PDF Viewer"),
-        backgroundColor: Colors.blue,
+        centerTitle: true,
       ),
       body: Container(
         padding: EdgeInsets.all(16),
@@ -54,7 +63,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     color: Colors.blue,
-                    onPressed: (){},
+                    onPressed: _option2,
                   )
                 ],
               ),
