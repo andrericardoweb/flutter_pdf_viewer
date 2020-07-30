@@ -29,6 +29,7 @@ class _Option2State extends State<Option2> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Option2 - Demo"),
+        centerTitle: true,
       ),
       body: _localFile != null
           ? Container(
